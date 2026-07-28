@@ -68,7 +68,7 @@
   /* ---------- nav ---------- */
   header.site-nav{
     position:sticky; top:0; z-index:50;
-    background:rgba(247,247,244,0.92);
+    background:rgba(255,255,255,0.92);
     backdrop-filter:saturate(140%) blur(6px);
     border-bottom:1px solid var(--rule);
   }
@@ -121,19 +121,20 @@
 
   /* ---------- about / hero ---------- */
   #about{padding-top:56px;}
-  .about-grid{display:grid; grid-template-columns:104px 1fr; gap:30px; align-items:start;}
+  .about-grid{display:grid; grid-template-columns:220px 1fr; gap:36px; align-items:start;}
+  .avatar-col{display:flex; flex-direction:column; align-items:flex-start; gap:16px;}
   .avatar{
-    width:104px; height:104px; border-radius:8px;
+    width:220px; height:220px; border-radius:12px;
     background:linear-gradient(155deg, var(--band-1), var(--band-4));
     display:flex; align-items:center; justify-content:center;
-    font-family:var(--serif); color:#fff; font-size:1.9rem; font-weight:600;
+    font-family:var(--serif); color:#fff; font-size:3.2rem; font-weight:600;
     flex-shrink:0;
-	overflow:hidden;  
+    overflow:hidden;
   }
-	.avatar img{
-	width:100%; height:100%; object-fit:cover; display:block;
-	}
-	 .social-icons{display:flex; flex-wrap:wrap; gap:10px;}
+  .avatar img{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .social-icons{display:flex; flex-wrap:wrap; gap:10px;}
   .social-icons a{
     width:38px; height:38px; border-radius:8px;
     border:1px solid var(--rule-strong); background:var(--paper-raised);
@@ -143,6 +144,7 @@
   }
   .social-icons a svg{width:18px; height:18px; fill:currentColor;}
   .social-icons a:hover{color:var(--ember); border-color:var(--ember); transform:translateY(-2px);}
+
   h1{
     font-family:var(--serif); font-weight:600; font-size:2.15rem;
     margin:0 0 6px; line-height:1.15; letter-spacing:-0.01em;
@@ -172,7 +174,7 @@
 
   @media (max-width:640px){
     .about-grid{grid-template-columns:1fr; text-align:left;}
-    .avatar{width:64px; height:64px; font-size:1.3rem;}
+    .avatar{width:150px; height:150px; font-size:2.1rem;}
     h1{font-size:1.7rem;}
   }
 
@@ -278,10 +280,11 @@
   <!-- ABOUT -->
   <section id="about" class="wrap">
     <div class="about-grid">
-      <div class="avatar" >
-		 <img src="images/profile.png" alt="Mahmad Isaq Karankot">
-	  </div>
-		<div class="social-icons">
+      <div class="avatar-col">
+        <div class="avatar">
+          <img src="images/profile.png" alt="Mahmad Isaq Karankot">
+        </div>
+        <div class="social-icons">
           <a href="mailto:mahmad.isaq@outlook.com" aria-label="Email" title="Email">
             <svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.15 5.72a1 1 0 0 0 1.25 0L19.75 6H4.2ZM4 8.2V18h16V8.2l-6.87 5.5a3 3 0 0 1-3.76 0L4 8.2Z"/></svg>
           </a>
@@ -300,7 +303,6 @@
         </div>
       </div>
       <div>
-      <div>
         <h1>Mahmad Isaq Karankot</h1>
         <p class="role-line">Ph.D. Candidate, Electrical &amp; Computer Engineering</p>
         <div class="bio">
@@ -317,12 +319,6 @@
           <span class="tag">Healthcare ML</span>
         </div>
         <div class="band-row"><div class="band thin"></div></div>
-        <!-- <div class="stat-row">
-          <div class="stat"><span class="n">8</span><span class="l">Publications</span></div>
-          <div class="stat"><span class="n">6+</span><span class="l">Yrs Engineering</span></div>
-          <div class="stat"><span class="n">3.94</span><span class="l">M.S. GPA</span></div>
-          <div class="stat"><span class="n">2027</span><span class="l">Expected Ph.D.</span></div>
-        </div> -->
       </div>
     </div>
   </section>
